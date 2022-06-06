@@ -15,6 +15,7 @@ public class dayOfMonth {
                 System.out.println("thang " + a+ "co 30 ngay");
             }else{
                 System.out.println("thang " + a +"co 31 ngay");
+
             }
         }
     }
