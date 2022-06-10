@@ -11,74 +11,74 @@ public class readNumber {
         int startzero[] = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9};
         String lessthantwelve[] = {"ten", "eleven", "twelve", "thirteen", "fourteen", "fifteen", "sixteen", "seventeen", "eighteen", "nineteen", "twenty"};
         Integer starten[] = {10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20};
-        int checkk = 0;
-        int secondd = 0;
+        int check1 = 0;
+        int second1 = 0;
         String str;
         if (Integer.parseInt(str1) <= 20) {
-            checkk = Arrays.asList(starten).indexOf(Integer.parseInt(str1));
-            str = lessthantwelve[checkk];
+            check1 = Arrays.asList(starten).indexOf(Integer.parseInt(str1));
+            str = lessthantwelve[check1];
             System.out.println(str);
         } else {
             {
                 switch (Character.getNumericValue(str1.charAt(0))) {
                     case 2:
-                        secondd = Character.getNumericValue((str1.charAt(1)));
-                        if (secondd == 0) {
+                        second1 = Character.getNumericValue((str1.charAt(1)));
+                        if (second1 == 0) {
                             str = "twenty";
                             System.out.println(str);
                         } else {
                             str = "twenty";
-                            System.out.println(str +"-" +lessthanten[secondd]);
+                            System.out.println(str + "-" + lessthanten[second1]);
                         }
                         break;
                     case 3:
-                        secondd = Character.getNumericValue((str1.charAt(1)));
-                        if (secondd == 0) {
+                        second1 = Character.getNumericValue((str1.charAt(1)));
+                        if (second1 == 0) {
                             str = "thirty";
                             System.out.println(str);
                         } else {
                             str = "thirty";
-                            System.out.println(str +"-" +lessthanten[secondd]);
+                            System.out.println(str + "-" + lessthanten[second1]);
                         }
                         break;
                     case 5:
-                        secondd = Character.getNumericValue((str1.charAt(1)));
-                        if (secondd == 0) {
+                        second1 = Character.getNumericValue((str1.charAt(1)));
+                        if (second1 == 0) {
                             str = "fifty";
                             System.out.println(str);
                         } else {
                             str = "fifty";
-                            System.out.println(str + "-" + lessthanten[secondd]);
+                            System.out.println(str + "-" + lessthanten[second1]);
                         }
                         break;
                     case 8:
-                        secondd = Character.getNumericValue((str1.charAt(1)));
-                        if (secondd == 0) {
+                        second1 = Character.getNumericValue((str1.charAt(1)));
+                        if (second1 == 0) {
                             str = "eighty";
                             System.out.println(str);
                         } else {
                             str = "eighty";
-                            System.out.println(str + "-" + lessthanten[secondd]);
+                            System.out.println(str + "-" + lessthanten[second1]);
                         }
                         break;
                     case 9:
-                        secondd = Character.getNumericValue((str1.charAt(1)));
-                        if (secondd == 0) {
+                        second1 = Character.getNumericValue((str1.charAt(1)));
+                        if (second1 == 0) {
                             str = "nighty";
                             System.out.println(str);
                         } else {
                             str = "nighty";
-                            System.out.println(str + "-" + lessthanten[secondd]);
+                            System.out.println(str + "-" + lessthanten[second1]);
                         }
                         break;
                     default: {
                         int secondd1 = Character.getNumericValue((str1.charAt(1)));
-                        secondd = Character.getNumericValue((str1.charAt(0)));
+                        second1 = Character.getNumericValue((str1.charAt(0)));
                         if (secondd1 == 0) {
-                            str = lessthanten[secondd] + "ty";
+                            str = lessthanten[second1] + "ty";
                             System.out.println(str);
                         } else {
-                            str = lessthanten[secondd] + "ty-"+ lessthanten[secondd1];
+                            str = lessthanten[second1] + "ty-" + lessthanten[secondd1];
                             System.out.println(str);
                         }
                     }
@@ -107,21 +107,32 @@ public class readNumber {
                 twocase(input);
                 break;
             case 3:
-                String first = lessthan10[Character.getNumericValue((input.charAt(0)))];
-                first+=" hundred";
-                String last = Integer.toString(Character.getNumericValue((input.charAt(1))));
-                last+=Integer.toString(Character.getNumericValue((input.charAt(2))));
-                System.out.print(first +" ");
-                twocase(last);
+                String last;
+                String first;
+                int x = Character.getNumericValue(input.charAt(1));
+                if (x == 0) {
+                    first = lessthan10[Character.getNumericValue((input.charAt(0)))];
+                    first += " hundred";
+                    int y = Character.getNumericValue(input.charAt(2));
+                    System.out.println(first+" ");
+
+                } else {
+                    first = lessthan10[Character.getNumericValue((input.charAt(0)))];
+                    first += " hundred";
+                    last = Integer.toString(Character.getNumericValue((input.charAt(1))));
+                    last += Integer.toString(Character.getNumericValue((input.charAt(2))));
+                    System.out.print(first + " ");
+                    twocase(last);
+                }
                 break;
             case 4:
                 String thousand;
                 thousand = lessthan10[Character.getNumericValue(input.charAt(0))] + " thousand ";
-                String hundred = lessthan10[Character.getNumericValue((input.charAt(1)))]+ " hundred ";
+                String hundred = lessthan10[Character.getNumericValue((input.charAt(1)))] + " hundred ";
                 thousand += hundred;
                 String ty = Integer.toString(Character.getNumericValue((input.charAt(2))));
-                ty+=Integer.toString(Character.getNumericValue((input.charAt(3))));
-                System.out.print(thousand +" ");
+                ty += Integer.toString(Character.getNumericValue((input.charAt(3))));
+                System.out.print(thousand + " ");
                 twocase(ty);
         }
     }

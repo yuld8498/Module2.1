@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class findcharacter {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Enter String want find char: ");
+        System.out.println(" String want find char: ");
         String srt = scanner.nextLine();
         System.out.println("Enter character find in String: ");
         String character = scanner.nextLine();
