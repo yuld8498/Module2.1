@@ -1,6 +1,7 @@
 package OOP;
 
 import java.time.LocalTime;
+import java.util.Currency;
 
 public class StopWatch {
     private LocalTime Startime;
@@ -30,11 +31,12 @@ public class StopWatch {
     }
 
     public static void main(String[] args) {
-        StopWatch stopWatch = new StopWatch(LocalTime.now(), LocalTime.now());
-         stopWatch.getStartime();
-        for (int i=0;i<1000000;i++){
-            stopWatch.getEndtime();
-            stopWatch.getElapsedTime();
+        Long startTime = System.currentTimeMillis();
+
+        for (int i=0;i<1000;i++){
+            Long endTime = System.currentTimeMillis();
+            Long runTime =  endTime - startTime;
+            System.out.println(runTime);
         }
     }
 }
