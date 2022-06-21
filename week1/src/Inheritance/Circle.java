@@ -5,10 +5,6 @@ public class Circle {
     private String color;
     private double Area;
 
-    public void setArea(double area) {
-        Area = area;
-    }
-
     public double getArea() {
         return Area;
     }
@@ -28,7 +24,8 @@ public class Circle {
     public void setColor(String color) {
         this.color = color;
     }
-    public String toString(){
-        return "Radius of Circle is: " + radius + ". Area of Circle is: " + Area ;
+
+    public String toString() {
+        return "Radius of Circle is: " + radius + ". Area of Circle is: " + Area;
     }
 }
